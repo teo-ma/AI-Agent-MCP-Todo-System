@@ -29,7 +29,7 @@
 ## 文件结构
 
 ```
-MCP-test-py/
+AI-Agent-MCP-Todo-System/
 ├── main.py              # 主程序和CLI界面
 ├── ai_agent.py          # AI Agent客户端
 ├── mcp_server.py        # MCP HTTP服务器
@@ -64,20 +64,27 @@ cp .env.example .env
 vi .env  # 或使用其他编辑器
 ```
 
-### 3. 快速启动
+### 3. 快速启动（推荐）
+
+使用一键启动脚本，自动完成所有设置：
 
 ```bash
 # 克隆或下载项目
-cd MCP-test-py
+git clone https://github.com/teo-ma/AI-Agent-MCP-Todo-System.git
+cd AI-Agent-MCP-Todo-System
 
 # 给启动脚本执行权限
 chmod +x start.sh
 
-# 运行启动脚本
+# 运行启动脚本（会自动安装依赖、启动数据库、启动服务）
 ./start.sh
 ```
 
-### 4. 手动启动
+### 4. 手动启动（高级用户）
+
+如果您希望分步控制启动过程，可以选择手动启动：
+
+如果您希望分步控制启动过程，可以选择手动启动：
 
 ```bash
 # 1. 安装依赖
@@ -95,6 +102,8 @@ python mcp_server.py
 # 5. 启动AI助手（另一个新终端窗口）
 python main.py interactive
 ```
+
+> **注意**: 快速启动和手动启动二选一即可，推荐使用快速启动方式。
 
 ### 5. 使用CLI命令
 
